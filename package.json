@@ -1,0 +1,22 @@
+{
+  "name": "davidhabtyan.homework.bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchALL --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavIdHabeTyan/DavidHabtyan.homework.bootcamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavIdHabeTyan/DavidHabtyan.homework.bootcamp/issues"
+  },
+  "homepage": "https://github.com/DavIdHabeTyan/DavidHabtyan.homework.bootcamp#readme",
+  "dependencies": {
+    "jest": "^28.1.1"
+  }
+}
