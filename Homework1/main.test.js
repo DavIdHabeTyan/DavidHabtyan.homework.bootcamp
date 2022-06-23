@@ -1,6 +1,8 @@
 
 
-describe('1. Write a function that checks if the number is palindrome(121, 23432), dont use strings, and work with numbers.',  () => {
+
+
+describe('1. Write a function that checks if the number is palindrome(121, 23432), dont use strings, and work with numbers. STRING))',  () => {
    function palindrome(numb){
       let number = numb;
       let lastNumber;
@@ -26,3 +28,30 @@ describe('1. Write a function that checks if the number is palindrome(121, 23432
    })
 
  });
+
+
+
+
+describe('1. Write a function that checks if the number is palindrome(121, 23432), dont use strings, and work with numbers.', () => {
+   function revers (numb) {
+      let number = numb;
+      let reversNUmb = 0;
+      while (number > 0) {
+         reversNUmb *= 10;
+         reversNUmb += number % 10;
+         number -= number % 10;
+         number /= 10;
+      }
+      return reversNUmb === numb
+   }
+
+   test('Test 1.', () => {
+      expect(revers(121)).toEqual(true)
+   });
+
+   test('Tets 2.', () => {
+      expect(revers(23432)).toEqual(true)
+   })
+
+
+});
