@@ -27,7 +27,7 @@ describe('1. Write a function that checks if the number is palindrome(121, 23432
 
 
 describe('1. Write a function that checks if the number is palindrome(121, 23432), dont use strings, and work with numbers.', () => {
-   function revers(numb) {
+   function checkNumberIsPalindrome(numb) {
       let number = numb;
       let reversNUmb = 0;
       while (number > 0) {
@@ -40,18 +40,18 @@ describe('1. Write a function that checks if the number is palindrome(121, 23432
    }
 
    test('Test 1.', () => {
-      expect(revers(121)).toEqual(true)
+      expect(checkNumberIsPalindrome(121)).toEqual(true)
    });
 
    test('Tets 2.', () => {
-      expect(revers(23432)).toEqual(true)
+      expect(checkNumberIsPalindrome(23432)).toEqual(true)
    })
 
 
 });
 
 describe('2. Write a function that finds the first 3 "Happy" numbers (p.s  number is happy if the sum of the dividers(not including the number itself) is equal to the number itself i.e 6 = 1 + 2 + 3,  28 = 1 + 2 + 4 + 7 + 14).', () => {
-   function happyNumber(numb) {
+   function findNumberIsHappy(numb) {
       let result = 0;
       for (let i = 0; i < numb; i++) {
          if (numb % i === 0) {
@@ -62,15 +62,15 @@ describe('2. Write a function that finds the first 3 "Happy" numbers (p.s  numbe
    }
 
    test('Test 1. Happy Number', () => {
-      expect(happyNumber(6)).toEqual(true);
+      expect(findNumberIsHappy(6)).toEqual(true);
    });
 
    test( 'Test 2. Happy Number', () => {
-      expect(happyNumber(28)).toEqual(true);
+      expect(findNumberIsHappy(28)).toEqual(true);
    })
 
    test(' Test 3. Don`t Happy Number', () => {
-      expect(happyNumber(15)).toEqual(false);
+      expect(findNumberIsHappy(15)).toEqual(false);
    })
 
 });
