@@ -9,7 +9,7 @@ describe('From the given array of numbers create two arrays one containing only 
             oddArr.push(arr[i])
          }
       }
-    return [oddArr, evenArr]
+      return [oddArr, evenArr]
    }
 
 

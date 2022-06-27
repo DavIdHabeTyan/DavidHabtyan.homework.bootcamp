@@ -1,5 +1,4 @@
-describe('Find the max payment', () => {
-
+describe('Calculate the average of all payments', () => {
    const payments = [
       {
          studentId: 1, // Unique identifier for each student
@@ -51,20 +50,17 @@ describe('Find the max payment', () => {
       }
    ];
 
-   function findMaxStudentAmount(arr) {
-      let maxAmount = arr.map(amount => {
-         return amount.payedAmount
-      }).reduce((val, aggr) => {
-         return (val > aggr ? val : aggr)
+   function sumPaymentsAverage(arr) {
+      let sumPayments = arr.map(val => {
+         return val.payedAmount
+      });
+      let sumAverage = sumPayments.reduce((val, aggr) => {
+         return (val + aggr)
       })
-
-      return maxAmount
+      return sumAverage / sumPayments.length
    }
 
    test('Test 1', () => {
-      expect(findMaxStudentAmount(payments)).toEqual(1600)
+      expect(sumPaymentsAverage(payments)).toEqual(1400)
    })
-
-})
-
-
+});
