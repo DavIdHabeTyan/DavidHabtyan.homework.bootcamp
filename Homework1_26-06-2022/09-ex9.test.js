@@ -1,4 +1,4 @@
-describe('Calculate the sum of all payments ', () => {
+describe('9. Calculate the sum of all payments ', () => {
    const payments = [
       {
          studentId: 1, // Unique identifier for each student

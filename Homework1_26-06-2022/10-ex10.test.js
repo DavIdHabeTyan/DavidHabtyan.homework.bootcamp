@@ -1,4 +1,4 @@
-describe(' Find the count of all payments that are more than 1500', () => {
+describe('10. Find the count of all payments that are more than 1500', () => {
    const payments = [
       {
          studentId: 1, // Unique identifier for each student

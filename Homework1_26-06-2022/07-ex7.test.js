@@ -1,4 +1,4 @@
-describe("From the given array of numbers and strings create 2 new arrays, one containing only numbers, another one only strings.", () => {
+describe("7. From the given array of numbers and strings create 2 new arrays, one containing only numbers, another one only strings.", () => {
    function sortNumberAndString(arr) {
       let numberArr = [];
       let stringArr = [];

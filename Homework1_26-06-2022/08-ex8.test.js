@@ -1,4 +1,4 @@
-describe('Find the max payment', () => {
+describe('8. Find the max payment', () => {
 
    const payments = [
       {

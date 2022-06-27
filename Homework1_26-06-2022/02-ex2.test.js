@@ -1,4 +1,4 @@
-describe('Find the smallest and the largest number from the supplied numeric array. Return an array containing these numbers։', () => {
+describe('2. Find the smallest and the largest number from the supplied numeric array. Return an array containing these numbers։', () => {
    function findMaxAndMinNumber(arr) {
       let newArr = []
       let maxElem = 0;

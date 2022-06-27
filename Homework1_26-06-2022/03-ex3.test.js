@@ -1,4 +1,4 @@
-describe('From the given array of numbers create two arrays one containing only odd and the other only even numbers', () => {
+describe('3. From the given array of numbers create two arrays one containing only odd and the other only even numbers', () => {
    function findOddAndEvenNumb(arr) {
       let oddArr = [];
       let evenArr = [];
