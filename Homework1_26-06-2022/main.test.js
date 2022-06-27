@@ -75,10 +75,10 @@ describe('2. Write a function that finds the first 3 "Happy" numbers (p.s  numbe
 });
 
 describe(' Write a method that creates a new array with given values ', () => {
-   function creatNewArr(numb, leter) {
+   function creatNewArr(numb, letter) {
       let result = [];
       for (let i = 0; i < numb; i++) {
-         result.push(leter)
+         result.push(letter)
       }
       return result
    }
