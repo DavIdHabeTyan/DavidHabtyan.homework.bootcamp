@@ -65,30 +65,13 @@
 // ];
 //
 // function findLowestScore(arr) {
-//  return  arr.filter(val => {
-//      return val.score === 25
-//   }).map(val => {
-//      return val.studentName
-//   })
-//
+//  let findStudentMinScore = arr.filter(val => {
+//     return val.score;
+//  }).reduce((sum, aggr) => {
+//     return sum < aggr ? sum : aggr;
+//  })
+//  return findStudentMinScore.studentName
 // }
 // console.log(findLowestScore(evaluations))
-
-
-function findUniqueValues(arr) {
-
-   let uniqueValues = [];
-   for (let i = 0; i < arr.length; i++) {
-      let count = 0
-      for (let j = 0; j < arr.length; j++) {
-         if (arr[i] === arr[j]) count++;
-
-      }
-      if (count === 1) {
-         uniqueValues.push(arr[i])
-      }
-   }
-   return uniqueValues
-}
-
-console.log(findUniqueValues(["d", 1, 2, 3, 5, 5, "d", "b", "g"]))
+//
+//
