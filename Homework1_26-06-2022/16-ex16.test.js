@@ -76,17 +76,20 @@ describe("16. * Return array of students for whom the average evaluation is less
          return aggr.score + vall
       }, 0);
 
-      let student = findStudent.filter(people => {
-         return people.studentId === id && people.courseId === 1
-      }).map(val => {
-         return {
-            studentId: val.studentId,
-            studentName: val.studentName,
-            courseId: val.courseId,
-            courseName: val.courseName,
-            score: averageScore / findStudent.length
+         if(averageScore / findStudent.length < 40){
+            return  findStudent.filter(people => {
+               return people.studentId === id && people.courseId === 1
+            }).map(val => {
+               return {
+                  studentId: val.studentId,
+                  studentName: val.studentName,
+                  courseId: val.courseId,
+                  courseName: val.courseName,
+                  score: averageScore / findStudent.length
+               }
+            })
          }
-      })
+
       return student
    }
 
