@@ -1,4 +1,4 @@
-describe("16. * Return array of students for whom the average evaluation is less than 40,", () => {
+describe("17. * Return array of courses including average evaluation for each course,", () => {
 
 
    const evaluations = [
@@ -67,46 +67,58 @@ describe("16. * Return array of students for whom the average evaluation is less
       }
    ];
 
-   function findAverageEvaluation(arr, id) {
-      let findStudent = arr.filter(student => {
-         return student.studentId === id
-      })
 
-      let averageScore = findStudent.reduce((vall, aggr) => {
-         return aggr.score + vall
-      }, 0);
-
-      if (averageScore / findStudent.length < 40) {
-         return findStudent.filter(people => {
-            return people.studentId === id && people.courseId === 1
-         }).map(val => {
-            return {
-               studentId: val.studentId,
-               studentName: val.studentName,
-               courseId: val.courseId,
-               courseName: val.courseName,
-               score: averageScore / findStudent.length
-            }
+   function findAverageCourseScore(arr) {
+      function cours(arr, id) {
+         let findcourse = arr.filter(course => {
+            return course.courseId === id
          })
-      } else {
-         return "Smart student"
+         let score = findcourse.reduce((val, aggr) => {
+            return aggr.score + val
+         }, 0);
+         let result = findcourse.filter(val => {
+            return val.studentId === 1
+         }).map(list => {
+            return {
+               courseId: list.courseId,
+               courseName: list.courseName,
+               score: score / findcourse.length
+            }
+         });
+         return result;
       }
 
-
+      return [
+         cours(arr, 1), cours(arr, 2), cours(arr, 3)
+      ]
    }
 
-   test('Test 1.', () => {
-      expect(findAverageEvaluation(evaluations, 3)).toEqual([{
-         studentId: 3,
-         studentName: "Sarah Conor",
-         courseId: 1,
-         courseName: "JS Bootcamp",
-         score: 35
-      }])
-   })
 
-   test("Test 2.", () => {
-      expect(findAverageEvaluation(evaluations, 2)).toEqual("Smart student")
-   })
+   test("Test 1.", () => {
+      expect(findAverageCourseScore(evaluations)).toEqual([
+            [
+               {
+                  courseId: 1,
+                  courseName: 'JS Bootcamp',
+                  score: 58.333333333333336
+               }
+            ],
+            [
+               {
+                  courseId: 2,
+                  courseName: 'JS Level 0',
+                  score: 48.333333333333336
+               }
+            ],
+            [
+               {
+                  courseId: 3,
+                  courseName: 'JS Level 1',
+                  score: 38.333333333333336
+               }
+            ]
+         ]
+      )
+   });
 
-})
+});
