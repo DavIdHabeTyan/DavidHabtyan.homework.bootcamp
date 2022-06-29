@@ -52,11 +52,9 @@ describe('8. Find the max payment', () => {
    ];
 
    function findMaxStudentAmount(arr) {
-      let maxAmount = arr.map(amount => {
-         return amount.payedAmount
-      }).reduce((val, aggr) => {
-         return (val > aggr ? val : aggr)
-      })
+      let maxAmount = arr.reduce((val, aggr) => {
+         return (aggr.payedAmount < val ? val : aggr.payedAmount)
+      },0)
 
       return maxAmount
    }

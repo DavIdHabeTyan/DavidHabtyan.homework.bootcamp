@@ -66,10 +66,8 @@ describe('13.  Return  the evaluation record with the lowest evaluation score,',
    ];
 
    function findLowestScore(arr) {
-      let findScore = arr.map(val => {
-         return val.score
-      }).reduce((val, aggr) => {
-         return val < aggr ? val : aggr;
+      let findScore = arr.reduce((val, aggr) => {
+         return val < aggr.score ? val : aggr.score;
       })
       return findScore
    }

@@ -54,10 +54,10 @@ describe('11. Calculate the average of all payments', () => {
       let sumPayments = arr.map(val => {
          return val.payedAmount
       });
-      let sumAverage = sumPayments.reduce((val, aggr) => {
-         return (val + aggr)
+      let sumAverage = sumPayments.reduce((val, aggr, index) => {
+         return (val + aggr) / index
       })
-      return sumAverage / sumPayments.length
+      return sumAverage
    }
 
    test('Test 1', () => {

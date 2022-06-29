@@ -51,11 +51,9 @@ describe('9. Calculate the sum of all payments ', () => {
    ];
 
    function sumPayments(arr) {
-      let sumAmount = arr.map(val => {
-         return val.payedAmount;
-      }).reduce((sum, aggr) => {
-         return sum + aggr;
-      });
+      let sumAmount = arr.reduce((sum, aggr) => {
+         return  aggr.payedAmount + sum;
+      }, 0);
       return sumAmount
    }
 
