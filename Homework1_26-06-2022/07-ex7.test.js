@@ -6,11 +6,11 @@ describe("7. From the given array of numbers and strings create 2 new arrays, on
          if (typeof elem === 'number') {
             numberArr.push(elem);
          } else {
-            stringArr.push(elem)
+            stringArr.push(elem);
          }
 
-      })
-      return [numberArr, stringArr]
+      });
+      return [numberArr, stringArr];
    }
 
 

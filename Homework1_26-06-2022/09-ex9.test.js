@@ -63,4 +63,4 @@ describe('9. Calculate the sum of all payments ', () => {
       expect(sumPayments(payments)).toEqual(11200)
    })
 
-})
+});

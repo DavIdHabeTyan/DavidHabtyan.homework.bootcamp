@@ -55,9 +55,11 @@ describe('10. Find the count of all payments that are more than 1500', () => {
       let maxCount = arr.map(val => {
          return val.payedAmount;
       }).filter(elem => {
-         if (elem > 1500) count++
+         if (elem > 1500) {
+            count++
+         }
       })
-      return count
+      return count;
    }
 
 

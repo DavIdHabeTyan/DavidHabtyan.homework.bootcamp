@@ -4,9 +4,13 @@ describe('4. Write a function to return only unique values of the given array.',
       for(let i = 0; i < arr.length; i++) {
          let count = 0;
          for(let j= 0; j < arr.length; j++){
-            if(arr[i] === arr[j]) count++
+            if(arr[i] === arr[j]) {
+               count++
+            }
          }
-         if(count === 1) uniqeValues.push(arr[i]);
+         if(count === 1) {
+            uniqeValues.push(arr[i]);
+         }
       }
       return uniqeValues
    }
