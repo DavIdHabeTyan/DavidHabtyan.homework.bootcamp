@@ -69,27 +69,27 @@ describe("17. * Return array of courses including average evaluation for each co
 
 
    function findAverageCourseScore(arr) {
-      function cours(arr, id) {
-         let findcourse = arr.filter(course => {
+      function course(arr, id) {
+         let findCourse = arr.filter(course => {
             return course.courseId === id
          })
-         let score = findcourse.reduce((val, aggr) => {
+         let score = findCourse.reduce((val, aggr) => {
             return aggr.score + val
          }, 0);
-         let result = findcourse.filter(val => {
+         let result = findCourse.filter(val => {
             return val.studentId === 1
          }).map(list => {
             return {
                courseId: list.courseId,
                courseName: list.courseName,
-               score: score / findcourse.length
+               score: score / findCourse.length
             }
          });
          return result;
       }
 
       return [
-         cours(arr, 1), cours(arr, 2), cours(arr, 3)
+         course(arr, 1), course(arr, 2), course(arr, 3)
       ]
    }
 
