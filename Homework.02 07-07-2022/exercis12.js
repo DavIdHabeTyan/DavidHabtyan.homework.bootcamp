@@ -1,12 +1,10 @@
 // 12. * Create a custom Array.prototype.myPush should work similarly to Array.prototype.push
 
-function myPush(arr, arr1){
-   let result = []
+function myPush(arr, arr1) {
    arr1.forEach(elem => {
-      result.concat(elem)
+      arr[arr.length] = elem
    })
-
-   return result
+   return arr
 }
 
 console.log(myPush(["1"], ["2", "3"]))
