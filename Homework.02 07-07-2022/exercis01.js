@@ -39,11 +39,11 @@ const employees = [{
 
 function findCorectEmpoledName(people) {
 
-   let result = people.reduce((acc, elem) => {
-      return acc + elem.firstName + " " +  elem.lastName + ", "
+   let result = people.map(( elem) => {
+      return `${elem.firstName} ${elem.lastName}`
 
       // return [... acc.concat(elem.firstName).concat(elem.lastName)]
-   }, [])
+   })
    return result.toString()
 }
 

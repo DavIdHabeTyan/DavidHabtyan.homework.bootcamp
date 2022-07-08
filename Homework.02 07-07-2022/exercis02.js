@@ -38,14 +38,18 @@ const employees = [{
    "salary": "$1368.00"
 }]
 
-function outputMailAndSalary(peoplesList) {
-   let result = peoplesList.reduce((acc, val) => {
-      return `${acc} ${val.email}: ${val.salary},`
 
-   },[])
-   let arr = []
-   return arr.concat(result).toString()
+function outputMailAndSalary(peoplesList) {
+   let result = peoplesList.map(( val) => {
+      return `${val.email}: ${val.salary}`
+
+   });
+   return result.toString();
 }
-let str = outputMailAndSalary(employees)
-console.log( str)
+let str = outputMailAndSalary(employees);
+console.log( str);
+
+
+
+
 

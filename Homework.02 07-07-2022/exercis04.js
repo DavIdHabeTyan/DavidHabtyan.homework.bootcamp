@@ -37,8 +37,10 @@ const employees = [{
    "salary": "$1368.00"
 }]
 function outputEmails(arr) {
-   return arr.reduce((acc, elem) => {
-      return acc + elem.email + "//"
-   },"")
+   let result =  arr.map(( elem) => {
+      return  elem.email.toString()
+   })
+
+   return result.join("//")
 }
 console.log(outputEmails(employees))
