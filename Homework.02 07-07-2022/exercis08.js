@@ -1,10 +1,10 @@
 function isPalindromeStr(str) {
-   let strToArr = str.split("")
+   let convertStrToArr = str.split("")
    let result = [];
-   while (0 < strToArr.length) {
-      result.push(strToArr.pop())
+   while (0 < convertStrToArr.length) {
+      result.push(convertStrToArr.pop())
    }
    return result.join("") === str
 }
 
-console.log(isPalindromeStr("David"))
+console.log(isPalindromeStr("asa"))

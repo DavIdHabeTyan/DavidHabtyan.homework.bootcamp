@@ -1,10 +1,15 @@
 // 12. * Create a custom Array.prototype.myPush should work similarly to Array.prototype.push
 
-function myPush(arr, arr1) {
-   arr1.forEach(elem => {
-      arr[arr.length] = elem
+Array.prototype.myPush = function(...arr){
+
+
+   arr.forEach(elem => {
+     this[this.length] = elem
    })
-   return arr
 }
 
-console.log(myPush(["1"], ["2", "3"]))
+
+let arr = [1, 2, 3]
+arr.myPush(5)
+
+console.log(arr)
