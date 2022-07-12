@@ -10,9 +10,7 @@ console.log(test(arr, 2))
 
  */
 
-let obj = {
-   name: "David",
-   age: 42,
-   phone: 4575412
-}
 
+let result = Array.from(["foo"])
+
+console.log(result)
