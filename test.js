@@ -10,7 +10,3 @@ console.log(test(arr, 2))
 
  */
 
-
-let result = Array.from(["foo"])
-
-console.log(result)
