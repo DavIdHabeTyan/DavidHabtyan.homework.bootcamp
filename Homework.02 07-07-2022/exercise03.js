@@ -1,4 +1,4 @@
-//* Create a custom Array.prototype.myToString it should work similarly to Array.prototype.toString
+//3. * Create a custom Array.prototype.myToString it should work similarly to Array.prototype.toString
 const employees = [{
    "firstName": "Porty",
    "lastName": "Simoni",
@@ -45,7 +45,7 @@ function myToString(elem) {
    }
    if(Array.isArray(elem)) {
    return elem.reduce((aggr,item) => {
-      return aggr + " " + item + ", "
+      return aggr + " " + item + ","
    },"")
 
 }
@@ -53,7 +53,7 @@ return typeof elem
 }
 
 
-console.log(myToString(["asdasdasd"]))
+console.log(myToString(["asdasdasd", "asd", "asd", "asd"]))
 
 
 
