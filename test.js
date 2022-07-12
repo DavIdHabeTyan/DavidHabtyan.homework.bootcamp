@@ -1,27 +1,18 @@
-let list = ["Bryant", "Batholomew", "Ritchie", "Kaylyn", "Wilhelmina", "Rouvin", "Flemming", "Sallee", "Roxine", "Arabela"]
+/*
+let arr = [1, 2, 3, 4]
+function test(arr, n){
 
-let number = [4.5 , 6, 123, 4,67 , 14, 65, 67 , 234,5 ]
-
-function sorted (arr) {
-   let result = arr.sort()
-
-
-   return result
+   return arr.slice(-n)
 }
 
-console.log(sorted(list))
+console.log(test(arr, 2))
 
 
-let animals = [
-   'cat', 'dog', 'elephant', 'bee', 'ant'
-];
+ */
 
-animals.sort((a, b) => {
-   if (a > b)
-      return -1;
-   if (a < b)
-      return 1;
-   return 0;
-});
+let arr = [1, 2, 3, 4]
+function test(arr, n) {
+   return arr.slice(0, n)
+}
 
-console.log(animals);
+console.log(test(arr, 2))
