@@ -1,4 +1,4 @@
-//Create a function that will find the employee by the provided name
+//42.  Create a function that will find the employee by the provided name
 
 import {employees} from "./index.js";
 
