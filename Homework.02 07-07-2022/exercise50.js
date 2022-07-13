@@ -9,3 +9,10 @@ function duplicateElement(number, elem){
 }
 
 console.log(duplicateElement(2, "Bla Bla"))
+
+
+
+function fillArr(quality, elem) {
+   return new Array(quality).fill(elem)
+}
+console.log(fillArr(4,'azaza'))
