@@ -10,13 +10,13 @@ console.log(test(arr, 2))
 
  */
 
-const data = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5];
 
-Array.prototype.myCustomFilter = function (fn) {
+Array.prototype.myCustomFilter = function (fun) {
    const filtered = []; // it will receive all values that match to condition passed in fn callback.
 
    for (let i = 0; i < this.length; i++) {
-      if (fn(this[i])) {
+      if (fun(this[i])) {
          filtered.push(this[i]);
       }
    }
@@ -24,8 +24,8 @@ Array.prototype.myCustomFilter = function (fn) {
    return filtered;
 };
 
-const filteredData = data.myCustomFilter(function (el) {
-   if (el < 2) return el;
+const filteredData = arr.myCustomFilter(function (elem) {
+   if (elem === 2) return elem;
 });
 
 // using arrow function

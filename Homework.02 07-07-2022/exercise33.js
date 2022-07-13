@@ -1,18 +1,17 @@
 // 33. * Create a custom Array.prototype.myFilter should work similarly to Array.prototype.filter
 
-function creatMyFilterMethod(arr, func) {
-   let filterArr = [];
-   for(let i = 0; i < arr.length; i++){
-      const result = func(arr[i], i, arr);
-      if(result){
-         filterArr.push(arr[i])
+Array.prototype.myFilter = function (fun) {
+   const filtered = [];
+
+   for (let i = 0; i < this.length; i++) {
+      if (fun(this[i])) {
+         filtered.push(this[i]);
       }
-
    }
-   return filterArr
+   return filtered
 }
-
-let newFilter = creatMyFilterMethod([5, 3, 4, 5, 56,  ],function(acc, val) {
-   return acc > val
-})
-console.log(newFilter)
+let arr = [2, 3, 4, 5, 76, 12, 54]
+const filteredArr =  arr.myFilter(function(elem) {
+   if(elem > 5) return elem
+});
+console.log(filteredArr)
