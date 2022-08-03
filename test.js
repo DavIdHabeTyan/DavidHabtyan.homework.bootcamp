@@ -13,7 +13,7 @@ console.log(getUnique([1234, 324,  56, 5 ,21, 3, 5, 34]))
 
 
  */
-
+/*
 const a = {
    age: 23,
    foo: function(arr) {
@@ -24,3 +24,10 @@ const a = {
 
 }
 a.foo([22])
+*/
+
+
+
+
+
+
