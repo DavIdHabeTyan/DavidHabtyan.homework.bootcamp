@@ -4,7 +4,7 @@
 
 const info = {
    name: "Anna",
-   type: "specialist",
+   type: "Magician",
    health: 99,
    level: 2,
    attack: 75,
@@ -14,8 +14,19 @@ const info = {
 
 class Character{
    constructor(list) {
-      this.name = list.name;
-      this.type = list.type;
+      if(typeof list.name === "string" && list.name.length > 2 && list.name.length <= 10) {
+         this.name = list.name
+      }else {
+         throw new Error("write correct name")
+      }
+
+      if(["Bowman", "Swordsman", "Magician", "Daemon", "Undead", "Zombie"].includes(list.type)){
+         this.type = list.type;
+      }else {
+         throw new Error("write correct type")
+      }
+
+
       this.health = list.health;
       this.level = list.level;
       this.attack = list.attack;
@@ -25,10 +36,41 @@ class Character{
 }
 
 const character  = new Character(info);
-
+console.log(character)
 
 class Bowerman extends Character{
-   constructor() {
-      super();
-   }
+   constructor(list) {
+      super(list);
+   };
 }
+
+class Swordsman extends Character{
+   constructor(list) {
+      super(list);
+   };
+}
+
+class Magician extends Character{
+   constructor(list){
+      super(list);
+   };
+}
+
+class Daemon extends Character{
+   constructor(list) {
+      super(list);
+   };
+}
+
+class Undead extends Character{
+   constructor(list) {
+      super(list);
+  };
+}
+
+class Zombie extends Character{
+   constructor(list) {
+      super(list);
+   };
+}
+
