@@ -9,9 +9,8 @@ function CoffeeShop(name, menu) {
    this.orders = [];
 
    this.addOrder = function (addName) {
-       this.menu.find(elem => {
-         return elem.name === addName
-      })
+       this.menu.find(elem =>  elem.name === addName)
+
       if (addName) {
          this.orders.push(addName)
       }
@@ -41,15 +40,13 @@ function CoffeeShop(name, menu) {
    }
 
    this.drinksOnly = () => {
-      return this.menu.filter(drinks => {
-         return drinks.type === "drink"
-      }).map(elem => elem.name)
+      return this.menu.filter(drinks =>  drinks.type === "drink")
+         .map(elem => elem.name)
    }
 
    this.foodOnly = () => {
-      return this.menu.filter(food => {
-         return food.type === "food"
-      }).map(elem => elem.name)
+      return this.menu.filter(food =>  food.type === "food")
+         .map(elem => elem.name)
 
    }
 }
