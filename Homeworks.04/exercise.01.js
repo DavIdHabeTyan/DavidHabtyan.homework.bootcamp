@@ -9,7 +9,9 @@ class University {
    }
 
    addMember(member) {
-
+         let newList = [];
+         newList.push(member)
+      return newList
    };
 
    removeMember(member) {
@@ -17,37 +19,39 @@ class University {
    };
 
    startLesson() {
-      return 24 - this.energy
+      return
    };
-
-
 }
 
+const university = new University();
 
-class Teacher extends University {
-   constructor(name, age, role, energy = 24 ) {
-      super();
+
+class UniversityMember{
+   constructor(name, age, role, energy = 24){
       this.name = name;
       this.age = age;
       this.role = role;
       this.energy = energy;
-   };
-
+   }
    info() {
-      return `${this.name}, ${this.age}, ${this.role}, ${this.energy}`;
-   };
-}
-
-class Student extends University {
-   constructor(name, age, role, energy = 24) {
-      super();
-   this.name = name;
-   this.age = age;
-   this.role = role;
-   this.energy = energy;
-   };
-
-   info() {
-      return `${this.name}, ${this.age}, ${this.role}, ${this.energy}`;
+      return `${this.name}, ${this.age}, ${this.role}, ${this.energy}`
    }
 }
+
+
+class Teacher extends UniversityMember{
+   constructor(name, age, role, energy) {
+      super(name, age, role, energy);
+   }
+}
+
+const teacher = new Teacher("David", 32, "Developer")
+console.log(teacher)
+
+
+class Student extends UniversityMember{
+   constructor(name, age, role, energy) {
+      super(name, age, role, energy);
+   }
+}
+
