@@ -8,7 +8,7 @@ class TV {
 
    }
 
-   increaseVolume = function () {
+   increaseVolume =  () =>{
       if (this.volume > 0 && this.volume < 100) {
          return this.volume++
       } else {
@@ -28,9 +28,10 @@ class TV {
       return this.channel = set
    }
 
-   ////// ??????????
-   reset = () => {
 
+   reset = () => {
+      this.channel = 50;
+      this.volume = 1;
    }
 
    status = () => {
@@ -46,3 +47,8 @@ console.log(tv.decreaseVolume())
 console.log(tv.decreaseVolume())
 
 console.log(tv.status())
+console.log(tv.reset())
+console.log(tv.status())
+
+
+//// undefined method kancheluc.

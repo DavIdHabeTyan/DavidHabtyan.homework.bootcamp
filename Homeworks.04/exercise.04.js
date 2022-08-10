@@ -5,8 +5,8 @@
 const info = {
    name: "Anna",
    type: "Magician",
-   health: 99,
-   level: 2,
+   health: 100,
+   level: 1,
    attack: 75,
    defense: 25
 }
