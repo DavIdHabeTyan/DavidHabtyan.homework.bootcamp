@@ -2,12 +2,10 @@ class City {
    constructor() {
       this.building = []
    }
-   buildings = () => {
-      return this.building
-   }
+
+
 }
 
-const city = new City();
 
 // ------------------------ Building ------------------
 class Building extends City {
@@ -21,30 +19,23 @@ class Building extends City {
 class Hospital extends Building {
    constructor() {
       super();
-   }
-
-   addHospital = (name) => {
-      this.buildings.push(name)
+      this.cars = []
    }
 }
-
-const nairiHospital = new Hospital();
-
-console.log(city.buildings())
 
 
 // ------------------------ PoliceDepartment ------------------
 class PoliceDepartment extends Building {
    constructor() {
       super();
+      this.cars = [];
    }
 }
 
 
 // ------------------------ Car ------------------
-class Car extends City {
+class Car {
    constructor() {
-      super();
    }
 }
 
@@ -53,13 +44,30 @@ class Car extends City {
 class PoliceCar extends Car {
    constructor() {
       super();
+      this.type = "Police"
    }
 }
+
 // ------------------------ AmbulanceCar ------------------
 class AmbulanceCar extends Car {
    constructor() {
       super();
+      this.type = "Ambulance"
    }
 }
+
+const nairi = new Hospital();
+const astxik = new Hospital();
+const mikaelyan = new Hospital();
+const police = new PoliceDepartment();
+const city = new City();
+const car = new Car();
+const policeCar = new PoliceCar();
+const ambulanceCar = new AmbulanceCar();
+city.buildings = [nairi, astxik, mikaelyan, police];
+
+console.log(city);
+console.log(car, policeCar, ambulanceCar)
+
 
 
