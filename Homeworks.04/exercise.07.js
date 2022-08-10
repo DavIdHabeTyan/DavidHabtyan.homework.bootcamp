@@ -6,9 +6,9 @@ class Product {
       this.name = name;
       this.type = type;
       this.price = price;
-      if(typeof code !== "string" && code.length !== 5){
+      if (typeof code !== "string" && code.length !== 5) {
          throw new Error("Write correct code with 5 numbers ")
-      } else{
+      } else {
          this.code = code
       }
    };
@@ -16,7 +16,7 @@ class Product {
 
 const products = new Product("Orange", "fruit", 500, "24513");
 const products11 = new Product("Car", "toys", 650, "45124");
-const products1 = new Product("Car", "toys", 630,"45124");
+const products1 = new Product("Car", "toys", 630, "45124");
 const products2 = new Product("Apple", "fruit", 350, "48745");
 const products3 = new Product("Korona", "drink", 1500, "12456");
 const products4 = new Product("Snickers", "candy", 300, "78953");
@@ -27,7 +27,7 @@ class ShoppingCart {
       this.bag = []
    };
 
-   addProduct (product)  {
+   addProduct(product) {
       this.bag.push(product)
 
    };
@@ -53,7 +53,6 @@ class ShoppingCart {
       }
 
       // gift one product free
-
 
 
    };

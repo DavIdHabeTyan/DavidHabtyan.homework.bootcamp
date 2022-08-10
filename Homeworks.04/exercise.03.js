@@ -1,14 +1,14 @@
 // Exercise 3 Abstract class
 
-class Abstract{
+class Abstract {
    constructor() {
-      if(this.constructor.name === "Abstract"){
+      if (this.constructor.name === "Abstract") {
          throw new Error("Abstract class cannot be instanced");
       }
    }
 }
 
-class Substract extends Abstract{
+class Substract extends Abstract {
    constructor() {
       super();
       this.type = "substract"

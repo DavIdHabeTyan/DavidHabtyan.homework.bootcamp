@@ -1,4 +1,4 @@
-export const menuList  = [
+export const menuList = [
    {
       name: "barbecue",
       type: "food",

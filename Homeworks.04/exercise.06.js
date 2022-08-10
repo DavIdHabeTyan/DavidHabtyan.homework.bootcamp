@@ -8,7 +8,7 @@ class TV {
 
    }
 
-   increaseVolume =  () =>{
+   increaseVolume() {
       if (this.volume > 0 && this.volume < 100) {
          return this.volume++
       } else {
@@ -16,7 +16,8 @@ class TV {
       }
 
    }
-   decreaseVolume = () => {
+
+   decreaseVolume() {
       if (this.volume >= 0 && this.volume <= 100) {
          return this.volume--
       } else {
@@ -24,23 +25,23 @@ class TV {
       }
    }
 
-   setChannel = (set) => {
+   setChannel(set) {
       return this.channel = set
    }
 
 
-   reset = () => {
+   reset() {
       this.channel = 50;
       this.volume = 1;
    }
 
-   status = () => {
+   status() {
       return `${this.brand} at channel ${this.channel}, volume ${this.volume}`
    }
 }
 
 let tv = new TV("Samsung", 10, 5);
-console.log(tv.setChannel(60))
+console.log(tv.setChannel(55))
 
 console.log(tv.decreaseVolume())
 console.log(tv.decreaseVolume())

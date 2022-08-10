@@ -23,10 +23,9 @@ class Character {
    constructor(list) {
       if (typeof list.name !== "string" && list.name.length < 2 && list.name.length > 10) {
          throw new Error("Write correct length")
-      }else{
+      } else {
          this.name = list.name
       }
-
 
 
       if (!["Bowman", "Swordsman", "Magician", "Daemon", "Undead", "Zombie"].includes(list.type)) {
@@ -35,7 +34,6 @@ class Character {
 
          this.type = list.type;
       }
-
 
 
       this.health = list.health;
@@ -50,15 +48,15 @@ class Character {
       this.defense += ((this.defense * 20) / 100);
       this.health = 100;
    }
-   damage(points){
-      if(this.health > 0) {
+
+   damage(points) {
+      if (this.health > 0) {
          this.health -= points.attack * (1 - this.defense / 100)
-      }else{
+      } else {
          throw new Error("this person dead")
       }
    }
 }
-
 
 
 class Bowerman extends Character {
